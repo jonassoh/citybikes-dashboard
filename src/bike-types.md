@@ -5,11 +5,8 @@ theme: [light, wide, alt, cotton]
 <!-- PROVIDED: This controls the theme of the page! [OPTIONAL] Feel free to change and play around with the theme to find one you like for this page! -->
 <!-- HINT: Reference the documentation given in the instructions! -->
 
-
 <!-- PROVIDED: Header/Page Title -->
 # Bike Types Dashboard
-
-
 
 <!-- PROVIDED Code: Imports the component used for this page's visualization. -->
 
@@ -17,8 +14,6 @@ theme: [light, wide, alt, cotton]
 // imports modules to be used
 import {bike_type_plot} from "./components/bike-type-plot.js";
 ```
-
-
 
 <!-- CHALLENGE 4.1 -->
 <!-- YOUR TURN: Add code to load the data from stations.json.js-->
@@ -30,7 +25,6 @@ import {bike_type_plot} from "./components/bike-type-plot.js";
 const stations_map = FileAttachment("./data/stations.json").json();
 ```
 
-
 <!-- CHALLENGE 4.2 -->
 <!-- YOUR TURN: Add code to create a dropdown/selector for all the stations in the network -->
 <!-- HINT: Reference the documentation given in the instructions! -->
@@ -40,9 +34,6 @@ const stations_map = FileAttachment("./data/stations.json").json();
 // this data of the selected station is stored in select_station and passed into bike-type-plot.js component for visualization!
 const selected_station = view(Inputs.select(Object.keys(stations_map), {label: "Select a station:"}))
 ```
-
-
-
 <!-- PROVIDED code: Displays the visualization you made in bike-type-plot.js.-->
 ```js
 const selected_station_data = stations_map[selected_station]
