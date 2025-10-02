@@ -23,8 +23,8 @@ async function json(url) {
           station_info.set("name", station.name)
           station_info.set("free_bikes", station.free_bikes)
           station_info.set("empty_slots", station.empty_slots)
-          station_info.set("normal_bikes", station.normal_bikes)
-          station_info.set("ebikes", station.ebikes)
+          station_info.set("normal_bikes", station.extra.normal_bikes)
+          station_info.set("ebikes", station.extra.ebikes)
           // Adds to the station_data dictionary with the key-value pair of name:info (where info is a dictionary)
           station_data.set(station.name, station_info);
       });

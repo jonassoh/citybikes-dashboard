@@ -5,8 +5,7 @@ export function station_demand_plot(network_data, station_data, {width} = {}) {
     // if needed, variables can be created here
 
     return Plot.plot({
-        title: "Station Demand in the Pogoh Bike-Sharing Network",// CHALLENGE 6.1 - Your code here
-        width,
+        title: `Station Demand in the ${network_data.name} Bike Sharing Network`,// CHALLENGE 6.1 - Your code here
         marks: [
             // CHALLENGE 6.2
             Plot.barY(station_data, {
@@ -28,7 +27,7 @@ export function station_demand_plot(network_data, station_data, {width} = {}) {
         },
         // CHALLENGE 6.5
         marginLeft: 80,// value,
-        width: 1000,//value,
+        width: width ?? 1000,//value,
         height: 700,//value,
         marginBottom: 200//value
     });
